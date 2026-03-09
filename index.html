@@ -4,10 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Issue Tracker</title>
-</head>
-<body>
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
 
-    <h1>Hello World</h1>
+    <!-- Tailwind + Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <!-- Geist font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <!-- Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+       * {
+             font-family: "Geist", sans-serif;
+        }
+     </style>
+</head>
+<body class="min-h-screen  mx-auto bg-[#F8FAFC]">
+    
+    
+    <div class="form pt-10">
+        <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-2xl mx-auto rounded-xl">
+            <div class="card-body">
+
+                <div class="space-y-3">
+                    <div class="logo w-[200px] mx-auto pt-10 flex justify-center">
+                        <img src="./assets/github-logo.png" alt="">
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="font-extrabold text-2xl">Github Issue Tracker</h2>
+                        <p>Sign in to manage your issues</p>
+                    </div>
+                </div>
+                
+                <fieldset class="fieldset">
+                <label class="label text-neutral font-bold">User Name</label>
+                <input maxlength="11" minlength="11" type="text" class="input rounded-md bg-base-200" placeholder="Enter Username" id="user-name" />
+                
+                <span class="text-[#4A00FF]">Default: admin</span>
+                
+
+                <label class="label text-neutral font-bold">Password</label>
+                <input type="password" class="input rounded-md bg-base-200" placeholder="Enter Password"  id="password"/>
+                <span class="text-[#4A00FF]">Default: admin123</span>
+                <button id="signin-btn" class="btn btn-primary mt-4 rounded-full">Sign In</button>
+                </fieldset>
+
+                <div class="flex items-center my-4">
+                    <div class="flex-grow border-t border-gray-300"></div>
+                
+                    <span class="mx-4 text-gray-500 font-medium">OR</span>
+                
+                    <div class="flex-grow border-t border-gray-300"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./scripts/signin.js"></script>
     
 </body>
 </html>
